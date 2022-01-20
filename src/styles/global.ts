@@ -11,9 +11,17 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
   }
   html, body {
-    font-family:'Open Sans';
+    font-family:'Open Sans', sans-serif;
+    --screen-x: 1460px;
+    --screen-y: 1198px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+
   }
 `;
 
