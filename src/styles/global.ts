@@ -11,10 +11,9 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
   }
   html, body {
-    font-family:'Open Sans', sans-serif;
+    font-family:'Open Sans', Helvetica, sans-serif;
     --screen-x: 1460px;
     --screen-y: 1198px;
     text-rendering: optimizeLegibility;

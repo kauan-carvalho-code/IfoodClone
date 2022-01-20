@@ -11,7 +11,17 @@ export const Container = styled.div`
   align-items: center;
   height: 160px;
   width: auto;
+  margin: 0;
   cursor: pointer;
+  transition: all .3s;
+
+  @media only screen and (max-width: 960px) {
+    height: 130px;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 export const FigureContainer = styled.div<FigureContainerProps>`
@@ -22,20 +32,79 @@ export const FigureContainer = styled.div<FigureContainerProps>`
   position: relative;
   margin: 0;
   padding: 0;
+
+  @media only screen and (max-width: 960px) {
+    width: 150px;
+    height: 38px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    width: 96px;
+    height: 24px;
+  }
 `;
 
 export const Figure = styled.img`
   position: absolute;
-  position: absolute;
   bottom: 0;
   right: 50%;
   transform: translateX(50%);
+  border: 0;
+
+  &.drinks {
+    width: 140px;
+  }
+
+  &.pharmacy {
+    width: 100px;
+  }
+
+  &.express {
+    width: 96px;
+  }
+
+  &.petshop {
+    width: 135px;
+  }
+
+  @media only screen and (max-width: 960px) {
+      &.drinks {
+        width: 120px;
+      }
+      &.pharmacy {
+        width: 82px;
+      }
+      &.express {
+        width: 80px;
+      }
+      &.petshop {
+        width: 110px;
+      }
+    }
+
+  @media only screen and (max-width: 768px) {
+      &.drinks {
+        width: 74px;
+      }
+      &.pharmacy {
+        width: 56px;
+      }
+      &.express {
+        width: 54px;
+      }
+      &.petshop {
+        width: 70px;
+      }
+    }
 `;
 
 export const Option = styled.p`
   display: flex;
   align-items: center;
   margin: 12px 0 0;
+
+  color: #1a1a1a;
+  font-weight: 600;
 
   svg {
     color: #ea1d2c;

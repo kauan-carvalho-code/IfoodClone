@@ -65,7 +65,7 @@ export const Navigation = styled.nav`
 export const ButtonContainer = styled.div`
   display: flex;
   align-items: center;
-  height: 100%;
+  height: 88%;
 `;
 
 export const BarsContainer = styled.div`

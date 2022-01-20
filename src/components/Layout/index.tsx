@@ -11,7 +11,7 @@ function Layout({ children }: LayoutProps) {
     <>
       <Header />
       <Container>
-        {children}
+          {children}
       </Container>
     </>
   );

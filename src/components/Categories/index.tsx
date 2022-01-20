@@ -24,10 +24,10 @@ export function Categories() {
         </WrapperContent>
       </Wrapper>
       <Carousel>
-        <CarouselCard option="Bebidas" image="assets/drinks.webp" background="#f6d553" />
-        <CarouselCard option="Farmácia" image="assets/pharmacy.webp" background="#f9879c" />
-        <CarouselCard option="Express" image="assets/express.webp" background="#ea1d2c" />
-        <CarouselCard option="Pet shop" image="assets/petshop.webp" background="#8c60c5" />
+        <CarouselCard option="Bebidas" className="drinks" image="assets/drinks.webp" background="#f6d553" />
+        <CarouselCard option="Farmácia" className="pharmacy" image="assets/pharmacy.webp" background="#f9879c" />
+        <CarouselCard option="Express" className="express" image="assets/express.webp" background="#ea1d2c" />
+        <CarouselCard option="Pet shop" className="petshop" image="assets/petshop.webp" background="#8c60c5" />
       </Carousel>
     </Container>
   )
