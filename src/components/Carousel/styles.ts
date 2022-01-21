@@ -1,8 +1,65 @@
 import styled from "styled-components";
-import { Swiper, SwiperSlide } from "swiper/react";
 
 export const Container = styled.div`
-  padding: 70px 0 50px;
+  padding: 70px 0 10px;
+  height: 100%;
+  width: 98%;
+  
+  .swiper {
+  width: 100%;
+  height: 142px;
+  z-index: 1;
+  position: relative;
+  padding: 0 14px;
+  }
+
+  .mySwiper {
+  margin-bottom: 2rem;
+  width: 100%;
+  z-index: 1;
+  }
+
+  .swiper-wrapper {
+   height: 100%; 
+   z-index: 1;
+   align-items: center;
+  }
+
+  .swiper-button-prev {
+    color: #3e3e3e;
+    width: 36px;
+    height: 36px;
+    left: -0.015rem;
+    border: 1px solid #dcdcdc;
+    border-radius: 50%;
+    background: #fff;
+
+    &::after {
+      font-size: 1rem;
+    }
+
+    &:hover {
+    border-color: #9A9483
+  }
+  }
+
+  .swiper-button-next {
+    color: #3e3e3e;
+    width: 36px;
+    height: 36px;
+    right: -0.02rem;
+    border: 1px solid #dcdcdc;
+    border-radius: 50%;
+    background: #fff;
+
+    &::after {
+      font-size: 1rem;
+    }
+
+    &:hover {
+    border-color: #9A9483
+  }
+  }
 `;
 
 export const Title = styled.h2`
@@ -11,34 +68,5 @@ export const Title = styled.h2`
   font-size: 1.5rem;
   line-height: 1.875rem;
   border-top: 2px solid #f2f2f2;
-  padding: 50px 0 32px;
-  padding-top: 60px;
-`;
-
-export const CarouselContent = styled(Swiper)`
-
-`;
-
-export const CarouselSlide = styled(SwiperSlide)`
-  width: 100%;
-`;
-
-export const Link = styled.a`
-  width: 100%;
-  height: 132px;
-  position: relative;
-  padding: 20px 16px;
-  border-radius: 8px;
-  border: 1px solid #dcdcdc;
-  display: flex;
-  align-items: center;
-`;
-
-export const Logo = styled.img`
-`;
-
-export const About = styled.div`
-`;
-
-export const Checked = styled.div`
+  padding: 60px 0 32px;
 `;
