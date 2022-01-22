@@ -1,14 +1,7 @@
-import SwiperCore, {
-  Navigation
-} from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Container, Image } from "./styles";
-
-
-// install Swiper modules
-SwiperCore.use([Navigation]);
 
 
 export function LandingBanner({identifier}) {
@@ -19,17 +12,20 @@ export function LandingBanner({identifier}) {
        className="mySwiper" 
        spaceBetween={20} 
        slidesPerView={3}
-       navigation
        breakpoints={{
         0: {
-          slidesPerView: 1.4,
+          slidesPerView: 1.2,
+          spaceBetween: 10,
         },
         768: {
-          slidesPerView: 2.4,
+          slidesPerView: 1.8,
         },
         960: {
-          slidesPerView: 3,
+          slidesPerView: 2.4,
         },
+        1280: {
+          slidesPerView: 3,
+        }
       }}
       >
         <SwiperSlide className="swiper_slide">

@@ -3,8 +3,15 @@ import styled from "styled-components";
 export const Container = styled.div`
   .swiper {
   width: 100%;
-  height: 100%;
-  z-index: 9999;
+  height: 200px;
+  padding-bottom: 40px;
+
+  @media only screen and (max-width: 1280px) {
+    padding-bottom: 25px;
+    } 
+  @media only screen and (max-width: 768px) {
+    height: 140px;
+    }
   }
 
   .swiper-slide {
@@ -31,10 +38,10 @@ export const Container = styled.div`
   height: 100%;
   object-fit: cover;
   }
-`;
+`
 
 export const Image = styled.img`
   cursor: pointer;
-  width: 412px;
-  height: 200px;
+  width: 100%;
+  height: 100%;
 `;

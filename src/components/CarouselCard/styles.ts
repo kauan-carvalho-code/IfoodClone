@@ -9,15 +9,11 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  height: 160px;
-  width: auto;
+  height: 100%;
+  width: 100%;
   margin: 0;
   cursor: pointer;
   transition: all .3s;
-
-  @media only screen and (max-width: 960px) {
-    height: 130px;
-  }
 
   &:hover {
     transform: scale(1.05);

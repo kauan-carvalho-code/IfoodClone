@@ -6,7 +6,7 @@ export const Container = styled.header`
   background: #f7f7f7;
   top: 0;
   left: 0;
-  z-index: 9997;
+  z-index: 9999;
 `;
 
 export const Content = styled.div`

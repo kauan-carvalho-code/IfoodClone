@@ -6,6 +6,31 @@ export const Container = styled.div`
   justify-content: center;
   flex-direction: column;
   position: relative;
+
+  .mySwiper {
+    display: flex;
+    max-width: 842px;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    margin: 18px 0 25px;
+    position: relative;
+    padding: 0 22px;
+    height: 160px;
+
+    @media only screen and (max-width: 960px) {
+    height: 130px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      align-items: center;
+      margin: 0;
+      height: 85px;
+      margin: 25px 0;
+      max-width: 670px;
+    }
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -35,15 +60,4 @@ export const WrapperContent = styled.div`
   @media only screen and (max-width: 960px) {
     height: 180px;
   }
-`;
-
-export const Carousel = styled.div`
-  display: flex;
-  max-width: 842px;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-  width: 100%;
-  margin: 18px 0 25px;
-  position: relative;
 `;

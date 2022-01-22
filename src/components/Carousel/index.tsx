@@ -27,20 +27,18 @@ export function Carousel({title, sliders = [], loop, identifier}: CarouselProps)
       className="mySwiper" 
       spaceBetween={20} 
       loop={loop} 
-      slidesPerView={5} 
+      slidesPerView={5}
       navigation
       breakpoints={{
         0: {
-          slidesPerView: 1.4,
+          slidesPerView: 1.8,
+          loop: false,
         },
         480: {
-          slidesPerView: 2,
+          slidesPerView: 2.4,
         },
         768: {
           slidesPerView: 3,
-        },
-        960: {
-          slidesPerView: 4,
         },
         1280: {
           slidesPerView: 5,
@@ -48,8 +46,8 @@ export function Carousel({title, sliders = [], loop, identifier}: CarouselProps)
       }}
     >
       {  
-        sliders.map(({ name, category, image, checked }) => (
-            <SwiperSlide key={name} className="swiper_slide">
+        sliders.map(({ name, category, image, checked, id }) => (
+            <SwiperSlide key={id} className="swiper_slide">
               <CarouselSlide name={name} category={category} icon={image} checked={checked} />
             </SwiperSlide>
           ))

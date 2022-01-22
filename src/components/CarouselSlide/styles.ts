@@ -5,10 +5,6 @@ export const Slide = styled.div`
   height: 90%;
   cursor: pointer;
   display: flex;
-
-  &.swiper-slide {
-    gap: 12px;
-  }
 `;
 
 export const Link = styled.a`
@@ -33,6 +29,11 @@ export const Logo = styled.img`
   height: 56px;
   border-radius: 50%;
   border: 1px solid #dcdcdc;
+
+  @media only screen and (max-width: 1260px) {
+    width: 46px;
+    height: 46px;
+  }
 `;
 
 export const About = styled.div`
