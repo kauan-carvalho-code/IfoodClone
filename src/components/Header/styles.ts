@@ -21,6 +21,10 @@ export const Content = styled.div`
   @media only screen and (max-width: 60rem) {
     padding: 1.875rem 2.75rem 1.875rem 1.875rem;
   }
+
+  @media only screen and (max-width: 60rem) {
+    justify-content: space-between;
+  }
 `;
 
 export const NavContainer = styled.div`
@@ -33,7 +37,7 @@ export const LogoContainer = styled.div`
   height: 100%;
 
   @media only screen and (max-width: 60rem) {
-    padding-right: 3.125rem;
+    padding: 0 3.125rem;
   }
 `;
 
@@ -66,6 +70,12 @@ export const ButtonContainer = styled.div`
   display: flex;
   align-items: center;
   height: 88%;
+
+  @media only screen and (max-width: 60rem) {
+    .create_account {
+      display: none;
+    }
+  }
 `;
 
 export const BarsContainer = styled.div`

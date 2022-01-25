@@ -30,6 +30,18 @@ export const CitiesList = styled.ul`
   margin-bottom: 24px;
   grid-template-rows: repeat(5,min-content);
   padding: 0;
+
+  @media only screen and (max-width: 1248px) {
+    grid-template-rows: repeat(7, min-content);
+  }
+
+  @media only screen and (max-width: 768px) {
+    grid-template-rows: repeat(10, min-content);
+  }
+
+  @media only screen and (max-width: 560px) {
+    grid-template-rows: repeat(18, min-content);
+  }
 `;
 
 export const ListItem = styled.li`
@@ -37,6 +49,7 @@ export const ListItem = styled.li`
   line-height: 1.22;
   color: #717171;
   font-weight: 600;
+  margin-bottom: 0.2rem;
 
   a {
     cursor: pointer;

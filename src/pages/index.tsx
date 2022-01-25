@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Annoucement } from "../components/Annoucement";
 import { Carousel } from "../components/Carousel";
 import { Categories } from "../components/Categories";
+import { Copyright } from "../components/Copyright";
 import { ExploreByCities } from "../components/ExploreByCities";
 import { FoodLoverBanner } from "../components/FoodLoverBanner";
 import { Footer } from "../components/Footer";
@@ -58,6 +59,10 @@ const BannerContainer = styled.div`
   margin-top: 110px;
   border-top: 2px solid #f2f2f2;
 
+  @media only screen and (max-width: 1240px) {
+    margin-top: 40px;
+  }
+
   @media only screen and (max-width: 768px) {
     margin-top: 40px;
   }
@@ -91,6 +96,7 @@ export default function Home({ restaurants, markets, cities }) {
           <FullPageBanner />
           <ExploreByCities cities={cities}/>
           <Footer />
+          <Copyright />
         </MainContent>
       </Main>
     </Layout>

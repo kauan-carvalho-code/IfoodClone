@@ -20,7 +20,7 @@ export function Header() {
           </Navigation>
         </NavContainer>
         <ButtonContainer>
-          <Button background="#f7f7f7" color="#ea1d2c">criar conta</Button>
+          <Button className="create_account" background="#f7f7f7" color="#ea1d2c">criar conta</Button>
           <Button hover background="#ea1d2c">Entrar</Button>
         </ButtonContainer>
       </Content>
