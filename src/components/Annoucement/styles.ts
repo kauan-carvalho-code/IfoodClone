@@ -3,58 +3,91 @@ import styled from "styled-components";
 export const Container = styled.div`
   background-image: url("assets/backgroundAd.svg");
   background-repeat: no-repeat;
-  background-size: 85% auto;
-  
-  width: 45%;
-  height: 349px;
-  padding-bottom: 100px;
+  background-position: 30px 20px;
+  background-size: 70% auto;
+
+  width: 85%;
+  height: auto;
+  padding-bottom: 40px;
+
   position: relative;
 
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 
   @media only screen and (max-width: 960px) {
-    width: 100%;
-    background-size: 55% auto;
-    background-position: 30px 20px;
-    padding-bottom: 40px;
-    height: 277px;
+    background-size: 60% auto;
+    align-items: center;
+    padding-bottom: 100px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    width: 333px;
+    height: 248px;
+    background-size: 100% 100%;
+    background-position: 50%;
+    padding-bottom: 60px;
   }
 `;
 
 export const FigureContainer = styled.div`
+  width: 200px;
+  height: auto;
   position: absolute;
-  width: 50%;
-  left: 0.6rem;
-  bottom: 8rem;
-`;
+  left: 2.4rem;
+  bottom: 0;
+  
+  display: flex;
+  align-items: flex-end;
 
-export const Figure = styled.img`
-  width: 85%;
+  @media only screen and (max-width: 1248px) {
+    width: 193px;
+    bottom: 3rem;
+  }
 
   @media only screen and (max-width: 960px) {
     width: 235px;
-    bottom: 0;
+    left: 0;
+    bottom: 0.4rem;
+  }
+
+  @media only screen and (max-width: 768px) {
+    width: 147px;
+    left: 0%;
+    bottom: -0.2rem;
   }
 `;
 
-export const Content = styled.div`
-  position: absolute;
-  right: 0;
-  width: 50%;
-  top: -4.8rem;
+export const Figure = styled.img`
+  width: 100%;
+`;
 
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+export const Content = styled.div`
+  width: 50%;
+  position: relative;
+  top: -3.6rem;
+  right: 0;
 
   button {
     margin: 0;
   }
 
+  @media only screen and (max-width: 1248px) {
+    width: 45%;
+  }
+
   @media only screen and (max-width: 960px) {
-    top: 0;
+    top: 2.6rem;
+  }
+
+  @media only screen and (max-width: 768px) {
+    width: 52%;
+    top: 2rem;
+
+    button {
+      width: 114px;
+      height: 34px;
+    }
   }
 `;
 
@@ -66,21 +99,28 @@ export const Title = styled.p`
   font-weight: 600;
 
   @media only screen and (max-width: 960px) {
-    margin: 12px 80px 0 0;
-    line-height: 1.875rem;
     font-size: 1.5rem;
+    line-height: 1.875rem;
+  }
+
+  @media only screen and (max-width: 768px) {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+    width: 64%;
   }
 `;
 
 export const Subtitle = styled.p`
-  width: 90%;
   font-size: 1rem;
   line-height: 1.25rem;
   margin-top: 25px;
   color: #717171;
   margin-right: 24px;
+  width: 80%;
 
-  @media only screen and (max-width: 960px) {
-    width: 60%;
+  @media only screen and (max-width: 768px) {
+    font-size: .875rem;
+    line-height: 1.125rem;
+    width: 110%;
   }
 `;

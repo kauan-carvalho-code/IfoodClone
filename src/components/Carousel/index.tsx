@@ -35,10 +35,10 @@ export function Carousel({title, sliders = [], loop, identifier}: CarouselProps)
           loop: false,
         },
         480: {
-          slidesPerView: 2.4,
+          slidesPerView: 3,
         },
         768: {
-          slidesPerView: 3,
+          slidesPerView: 4,
         },
         1280: {
           slidesPerView: 5,
