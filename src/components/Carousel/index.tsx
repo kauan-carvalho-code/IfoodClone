@@ -8,9 +8,17 @@ import { Container, Title } from "./styles";
 
 SwiperCore.use([Navigation]);
 
+interface ISliders {
+  id: string;
+  name: string;
+  category: string;
+  image: string;
+  checked: boolean;
+}
+
 interface CarouselProps {
   title: string;
-  sliders: [];
+  sliders: ISliders[];
   loop: boolean;
   identifier: string;
 }

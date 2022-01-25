@@ -20,7 +20,6 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
-
   }
 `;
 

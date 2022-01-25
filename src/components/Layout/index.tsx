@@ -1,5 +1,6 @@
-import { ReactNode } from "react";
+import { ReactNode, useState } from "react";
 import { Header } from "../Header";
+import { MobileMenu } from "../MobileMenu";
 import { Container } from "./styles";
 
 interface LayoutProps {
@@ -7,12 +8,15 @@ interface LayoutProps {
 }
 
 function Layout({ children }: LayoutProps) {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
-      <Header />
-      <Container>
+      <Header handleClick={() => setIsOpen(true)} />
+      <MobileMenu isOpen={isOpen}  handleClick={() => setIsOpen(false)} />
+        <Container>
           {children}
-      </Container>
+        </Container>
     </>
   );
 }

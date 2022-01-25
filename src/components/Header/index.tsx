@@ -1,13 +1,17 @@
 import { Button } from "../Button";
-import { Bars, BarsContainer, Container, ButtonContainer, Content, Logo, LogoContainer, NavContainer, Navigation } from "./styles";
+import { Bars, BarsContainer, ButtonContainer, Container, Content, Logo, LogoContainer, NavContainer, Navigation } from "./styles";
 
-export function Header() {
+interface HeaderProps {
+  handleClick: () => void;
+}
+
+export function Header({handleClick}: HeaderProps) {
   return (
     <Container>
       <Content>
         <NavContainer>
-          <BarsContainer>
-          <Bars src="assets/threeBars.svg" alt="botão da sidebar"/>
+          <BarsContainer onClick={handleClick}>
+            <Bars src="assets/threeBars.svg" alt="botão da sidebar"/>
           </BarsContainer>
           <LogoContainer>
             <Logo src="assets/ifoodLogo.svg" alt="logo do ifood"/>
