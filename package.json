@@ -4,8 +4,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint --init",
-    "export": "next export && touch out/.nojekyll"
+    "lint": "eslint --init"
   },
   "dependencies": {
     "next": "latest",
