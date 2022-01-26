@@ -1,10 +1,6 @@
+import { ICities } from "../../types";
 import { Button } from "../Button";
 import { CitiesList, Container, Header, ListItem } from "./styles";
-
-interface ICities {
-  id: string;
-  name: string;
-}
 
 interface ExploreByCitiesProps {
   cities: ICities[];

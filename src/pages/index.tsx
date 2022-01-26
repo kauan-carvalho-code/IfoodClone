@@ -1,4 +1,5 @@
-import { GetStaticProps } from "next";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { Annoucement } from "../components/Annoucement";
 import { Carousel } from "../components/Carousel";
 import { Categories } from "../components/Categories";
@@ -11,8 +12,19 @@ import { LandingBanner } from "../components/LandingBanner";
 import Layout from "../components/Layout";
 import { SearchContainer } from "../components/SearchContainer";
 import { AnnoucementsContainer, BannerContainer, Main, MainContent } from "../styles/home";
+import { ICities, IRestaurantsAndMarkets } from "../types";
 
-export default function Home({ restaurants, markets, cities }) {
+export default function Home() {
+  const [restaurants, setRestaurants] = useState<IRestaurantsAndMarkets[]>([]);
+  const [markets, setMarkets] = useState<IRestaurantsAndMarkets[]>([]);
+  const [cities, setCities] = useState<ICities[]>([]);
+
+  useEffect(() => {
+    axios.get("/api/restaurants").then(({data}) => setRestaurants(data));
+    axios.get("/api/markets").then(({data}) => setMarkets(data));
+    axios.get("/api/cities").then(({data}) => setCities(data));
+  }, [])
+
   return (
     <Layout>
       <SearchContainer />
@@ -45,21 +57,4 @@ export default function Home({ restaurants, markets, cities }) {
       </Main>
     </Layout>
   )
-}
-
-export const getStaticProps: GetStaticProps = async () => {
-  const responseRestaurants = await fetch("http://localhost:3000/api/restaurants");
-  const responseMarkets = await fetch("http://localhost:3000/api/markets");
-  const responseCities = await fetch("http://localhost:3000/api/cities")
-  const dataRestaurants = await responseRestaurants.json();
-  const dataMarkets = await responseMarkets.json();
-  const dataCities = await responseCities.json();
-
-  return {
-    props: {
-      restaurants: dataRestaurants,
-      markets: dataMarkets,
-      cities: dataCities
-    }
-  }
 }

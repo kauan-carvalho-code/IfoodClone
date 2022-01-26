@@ -2,23 +2,16 @@ import SwiperCore, { Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { IRestaurantsAndMarkets } from "../../types";
 import { CarouselSlide } from "../CarouselSlide";
 import { Container, Title } from "./styles";
 
 
 SwiperCore.use([Navigation]);
 
-interface ISliders {
-  id: string;
-  name: string;
-  category: string;
-  image: string;
-  checked: boolean;
-}
-
 interface CarouselProps {
   title: string;
-  sliders: ISliders[];
+  sliders: IRestaurantsAndMarkets[];
   loop: boolean;
   identifier: string;
 }
